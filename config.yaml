@@ -1,0 +1,6 @@
+name: app
+env: sit
+port: 8080
+database:
+  write: postgresql://postgres:password@localhost:5432/database
+  read:
