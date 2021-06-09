@@ -1,4 +1,4 @@
-from bootstrap import db
+from skeleton.bootstrap import db
 from peewee import *
 
 class BaseModel(Model):

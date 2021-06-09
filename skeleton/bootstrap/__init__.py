@@ -1,17 +1,16 @@
 import yaml
 import io
 from flask import Flask
-from bootstrap.config import Config
-# from peewee import *
-from playhouse.db_url import connect
+from skeleton.bootstrap.config import Config
+from masoniteorm.connections import ConnectionResolver
 
 with io.open("config.yaml", "r") as stream:
   print("on load configuration file")
   cfg = Config(yaml.safe_load(stream))
   app = Flask(__name__)
-  db = connect(cfg.database.write)
 
-from api import router
+
+from skeleton.api import router
 
 # register route handler
 app.register_blueprint(router)

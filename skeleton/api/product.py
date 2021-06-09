@@ -1,4 +1,4 @@
-from api import router
+from skeleton.api import router
 
 @router.route("/product", methods=["GET"])
 def product_get():

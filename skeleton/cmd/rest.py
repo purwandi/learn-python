@@ -1,6 +1,6 @@
 import click
 
-from bootstrap import app, cfg
+from skeleton.bootstrap import app, cfg
 
 @click.command(help="Run rest http server")
 def rest():
