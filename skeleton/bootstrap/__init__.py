@@ -2,7 +2,6 @@ import yaml
 import io
 from flask import Flask
 from skeleton.bootstrap.config import Config
-from orator import DatabaseManager
 from skeleton.bootstrap.database import connect
 
 app = Flask(__name__)

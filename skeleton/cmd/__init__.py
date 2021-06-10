@@ -1,5 +1,4 @@
 from cleo import Application
-
 from orator.commands.migrations import(
   InstallCommand,
   MigrateMakeCommand,
