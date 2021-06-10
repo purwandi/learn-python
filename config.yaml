@@ -1,6 +1,6 @@
 name: app
 env: sit
-port: 8080
+port: 8000
 database:
-  write: postgresql://postgres:password@localhost:5432/database
+  write: postgresql://postgres:password@localhost:5432/database?sslmode=disable&application_name=skeleton
   read:

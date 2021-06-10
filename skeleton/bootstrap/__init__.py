@@ -2,13 +2,15 @@ import yaml
 import io
 from flask import Flask
 from skeleton.bootstrap.config import Config
-from masoniteorm.connections import ConnectionResolver
+from orator import DatabaseManager
+from skeleton.bootstrap.database import connect
+
+app = Flask(__name__)
 
 with io.open("config.yaml", "r") as stream:
   print("on load configuration file")
   cfg = Config(yaml.safe_load(stream))
-  app = Flask(__name__)
-
+  db = connect(cfg.database.write)
 
 from skeleton.api import router
 
